@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PlayerCard from './PlayerCard'
+import PlayerCard from './players/PlayerCard'
 import './Roster.css';
 
 class Roster extends Component {
