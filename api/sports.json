@@ -2,9 +2,143 @@
   "players": [
     {
       "id": 1,
-      "url": "placeholder",
-      "name": "placeholder",
-      "position": "placeholder"
+      "url": "AFirkser.png",
+      "name": "Anthony Firkser",
+      "position": "Tight End"
+    },
+    {
+      "id": 2,
+      "url": "AHumphries.png",
+      "name": "Adam Humphries",
+      "position": "Wide Receiver"
+    },
+    {
+      "id": 3,
+      "url": "AJBrown.png",
+      "name": "AJ Brown",
+      "position": "Wide Receiver"
+    },
+    {
+      "id": 4,
+      "url": "BJones.png",
+      "name": "Ben Jones",
+      "position": "Center"
+    },
+    {
+      "id": 5,
+      "url": "CDavis.png",
+      "name": "Corey Davis",
+      "position": "Wide Receiver"
+    },
+    {
+      "id": 6,
+      "url": "DaquanJones.png",
+      "name": "Daquan Jones",
+      "position": "Defensive Tackle"
+    },
+    {
+      "id": 7,
+      "url": "DHenry.png",
+      "name": "Derrick Henry",
+      "position": "Running Back"
+    },
+    {
+      "id": 8,
+      "url": "JayonBrown.png",
+      "name": "Jayon Brown",
+      "position": "Middle Linebacker"
+    },
+    {
+      "id": 9,
+      "url": "JConklin.png",
+      "name": "Jack Conklin",
+      "position": "Tight End"
+    },
+    {
+      "id": 10,
+      "url": "JefferySimmons.png",
+      "name": "Jeffery Simmons",
+      "position": "Defensive Tackle"
+    },
+    {
+      "id": 11,
+      "url": "JSmith.png",
+      "name": "Jannu Smith",
+      "position": "Tight End"
+    },
+    {
+      "id": 12,
+      "url": "JurrellCasey.png",
+      "name": "Jurrel Casey",
+      "position": "Defensive Tackle"
+    },
+    {
+      "id": 13,
+      "url": "KamaleiCorrea.png",
+      "name": "Kamalei Correa",
+      "position": "Outside Linebacker"
+    },
+    {
+      "id": 14,
+      "url": "KennyVaccaro.png",
+      "name": "Kenny Vaccaro",
+      "position": "Strong Safety"
+    },
+    {
+      "id": 15,
+      "url": "KevinByard.png",
+      "name": "Kevin Byard",
+      "position": "Free Safety"
+    },
+    {
+      "id": 16,
+      "url": "LoganRyan.png",
+      "name": "Logan Ryan",
+      "position": "Slot Cornerback"
+    },
+    {
+      "id": 17,
+      "url": "NDavis.png",
+      "name": "Nate Davis",
+      "position": "Right Guard"
+    },
+    {
+      "id": 18,
+      "url": "RashaanEvans.png",
+      "name": "Rashaan Evans",
+      "position": "Middle Linebacker"
+    },
+    {
+      "id": 19,
+      "url": "RSaffold.png",
+      "name": "Roger Saffold",
+      "position": "Left Guard"
+    },
+    {
+      "id": 20,
+      "url": "RTannihill.png",
+      "name": "Ryan Tannihill",
+      "position": "Quarterback"
+    },
+    {
+      "id": 21,
+      "url": "TLewan.png",
+      "name": "Taylor Lewan",
+      "position": "Left Tackle"
+    },
+    {
+      "id": 22,
+      "url": "TSharpe.png",
+      "name": "Tajae Sharpe",
+      "position": "Wide Receiver"
+    }
+  ],
+  "users": [
+    {
+      "name": "Mark",
+      "email": "mark@mark.com",
+      "password": "mark",
+      "id": 1
     }
   ]
 }
