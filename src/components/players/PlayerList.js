@@ -8,6 +8,18 @@ class PlayerList extends Component {
         players: [],
     }
 
+    deletePlayer = id => {
+        PlayerManager.delete(id)
+            .then(() => {
+                PlayerManager.getAll()
+                    .then((newPlayers) => {
+                        this.setState({
+                            players: newPlayers
+                        })
+                    })
+            })
+    }
+
 
     componentDidMount() {
         // console.log("player list: Component did mount");
@@ -25,7 +37,10 @@ class PlayerList extends Component {
             <>
                 <div className="container-cards">
                     {this.state.players.map(player =>
-                        <PlayerCard key={player.id} player={player} />
+                        <PlayerCard
+                            key={player.id}
+                            player={player}
+                            deletePlayer={this.deletePlayer} />
                     )}
                 </div>
             </>
