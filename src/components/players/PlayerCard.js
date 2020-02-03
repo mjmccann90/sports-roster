@@ -9,8 +9,8 @@ class PlayCard extends Component {
                     <picture>
                         <img src={require('./placeholder.svg')} alt="Player picture" />
                     </picture>
-                    <h3>Name:<span className="card-player-name">John Smith</span></h3>
-                    <p>Position: Water boy</p>
+                    <h3>Name:<span className="card-player-name">{this.props.player.name}</span></h3>
+                    <p>Position: {this.props.player.position}</p>
                 </div>
             </div>
         );
