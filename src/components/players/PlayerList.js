@@ -50,7 +50,8 @@ class PlayerList extends Component {
                         <PlayerCard
                             key={player.id}
                             player={player}
-                            deletePlayer={this.deletePlayer} />
+                            deletePlayer={this.deletePlayer}
+                            {...this.props} />
                     )}
                 </div>
             </>

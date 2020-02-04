@@ -21,5 +21,14 @@ export default {
             },
             body: JSON.stringify(newPlayer)
         }).then(data => data.json())
+    },
+    update(editedPlayer) {
+        return fetch(`${remoteURL}/animals/${editedPlayer.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(editedPlayer)
+        }).then(data => data.json());
     }
 }
