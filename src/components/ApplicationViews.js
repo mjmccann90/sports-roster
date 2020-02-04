@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Home from './home/Home'
 import PlayerCard from './players/PlayerCard'
 import PlayerDetail from './players/PlayerDetail'
+import PlayerForm from './players/PlayerForm'
 
 
 class ApplicationViews extends Component {
@@ -15,13 +16,16 @@ class ApplicationViews extends Component {
 
 
                 <Route exact path="/players" render={(props) => {
-                    return <PlayerCard />
+                    return <PlayerCard {...props} />
                 }} />
                 <Route exact path="/players" render={(props) => {
-                    return <PlayerList />
+                    return <PlayerList {...props} />
                 }} />
                 <Route exact path="/players/:playerId(\d+)" render={(props) => {
                     return <PlayerDetail playerId={parseInt(props.match.params.playerId)} {...props} />
+                }} />
+                <Route exact path="/players/new" render={(props) => {
+                    return <PlayerForm {...props} />
                 }} />
 
 
