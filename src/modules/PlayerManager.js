@@ -12,5 +12,14 @@ export default {
             method: "DELETE"
         })
             .then(result => result.json())
+    },
+    post(newPlayer) {
+        return fetch(`${remoteURL}/players`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newPlayer)
+        }).then(data => data.json())
     }
 }

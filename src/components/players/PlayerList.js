@@ -35,6 +35,16 @@ class PlayerList extends Component {
         // console.log("PlayerList: RENDER");
         return (
             <>
+                <section className="section-content">
+                    <button
+                        type="button"
+                        className="btn"
+                        onClick={() => { this.props.history.push("./players/new") }}>
+                        Add Player
+                    </button>
+
+                </section>
+
                 <div className="container-cards">
                     {this.state.players.map(player =>
                         <PlayerCard
