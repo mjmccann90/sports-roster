@@ -5,6 +5,7 @@ import PlayerCard from './players/PlayerCard'
 import PlayerDetail from './players/PlayerDetail'
 import PlayerForm from './players/PlayerForm'
 import Login from './auth/Login'
+import PlayerEditForm from './players/PlayerEditForm';
 
 
 class ApplicationViews extends Component {
@@ -33,12 +34,14 @@ class ApplicationViews extends Component {
                         return <Redirect to="/login" />
                     }
                 }} />
-
                 <Route exact path="/players/:playerId(\d+)" render={(props) => {
                     return <PlayerDetail playerId={parseInt(props.match.params.playerId)} {...props} />
                 }} />
                 <Route path="/players/new" render={(props) => {
                     return <PlayerForm {...props} />
+                }} />
+                <Route path="/players/:playerId(\d+)/edit" render={props => {
+                    return <PlayerEditForm {...props} />
                 }} />
 
 

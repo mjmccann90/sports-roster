@@ -14,6 +14,8 @@ class PlayCard extends Component {
                     <p>Position: {this.props.player.position}</p>
                     <button type="button" onClick={() => this.props.deletePlayer(this.props.player.id)}>Release</button>
                     <Link to={`/players/${this.props.player.id}`}><button>Details</button></Link>
+                    <button type="button"
+                        onClick={() => { this.props.history.push(`/players/${this.props.player.id}/edit`) }}>Edit</button>
                 </div>
             </div >
         );
