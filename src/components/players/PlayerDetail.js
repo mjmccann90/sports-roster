@@ -18,7 +18,7 @@ class PlayerDetail extends Component {
 
     componentDidMount() {
         console.log("PlayerDetail: ComponentDidMount");
-        PlayerManager.get(this.props.playerId)
+        PlayerManager.get("players", this.props.playerId)
             .then((player) => {
                 this.setState({
                     name: player.name,
@@ -35,9 +35,9 @@ class PlayerDetail extends Component {
                 <div className="card-content">
                     <picture>
                         {/* <img src={require('./Images/${this.state.imgUrl}')} /> */}
-                        <i class="fas fa-user"></i>
+                        <i className="fas fa-user"></i>
                     </picture>
-                    <h3>Name:<span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
+                    <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
                     <p>Position:{this.state.position}</p>
                     <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
 

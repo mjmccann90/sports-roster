@@ -1,12 +1,11 @@
 import { Route, withRouter, Redirect } from 'react-router-dom'
 import React, { Component } from 'react';
 import Home from './home/Home'
-//import PlayerCard from './players/PlayerCard'
 import PlayerDetail from './players/PlayerDetail'
 import PlayerForm from './players/PlayerForm'
 import Login from './auth/Login'
 import PlayerList from './players/PlayerList'
-//import PlayerEditForm from './players/PlayerEditForm';
+import PlayerEditForm from './players/PlayerEditForm';
 
 
 class ApplicationViews extends Component {
@@ -41,9 +40,9 @@ class ApplicationViews extends Component {
                 <Route path="/players/new" render={(props) => {
                     return <PlayerForm {...props} />
                 }} />
-                {/* <Route path="/players/:playerId(\d+)/edit" render={props => {
+                <Route path="/players/:playerId(\d+)/edit" render={props => {
                     return <PlayerEditForm {...props} />
-                }} /> */}
+                }} />
 
 
             </React.Fragment>
