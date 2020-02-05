@@ -17,8 +17,7 @@ class PlayerDetail extends Component {
     }
 
     componentDidMount() {
-        console.log("PlayerDetail: ComponentDidMount");
-        PlayerManager.get("players", this.props.playerId)
+        PlayerManager.get(this.props.playerId)
             .then((player) => {
                 this.setState({
                     name: player.name,
@@ -29,7 +28,7 @@ class PlayerDetail extends Component {
             });
     }
     render() {
-        if (this.state.loadingStatus) return <p>Loading</p>
+        if (this.state.loadingStatus) return <p>Loading...</p>
         return (
             <div className="content">
                 <div className="card-content">
