@@ -7,7 +7,7 @@ class Roster extends Component {
     render() {
         return (
             <div>
-                <h1>Titans' 2019 Roster</h1>
+                <h1></h1>
                 <div>
                     <Navbar />
                     <ApplicationViews />
