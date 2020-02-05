@@ -6,32 +6,36 @@ class PlayerEditForm extends Component {
     state = {
         playerName: "",
         position: "",
+        url: "",
+        id: "",
         loadingstatus: true,
     };
 
     handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
+        const stateToChange = {}
+        stateToChange[evt.target.id] = evt.target.value
+        this.setState(stateToChange)
     };
 
     updateExistingPlayer = evt => {
         evt.preventDefault()
         this.setState({ loadingstatus: true });
         const editedPlayer = {
-            id = this.props.match.params.playerId,
+            id: this.props.match.params.playerId,
             name: this.state.playerName,
-            position: this.state.position
+            position: this.state.position,
+            url: this.state.url
         };
         PlayerManager.update(editedPlayer)
             .then(() => this.props.history.push("/players"))
     }
     componentDidMount() {
-        PlayerManager.get(this.props.match.playerId)
+        PlayerManager.get(this.props.match.params.playerId)
             .then(player => {
                 this.setState({
                     playerName: player.name,
-                    breed: player.position,
+                    position: player.position,
+                    url: player.url,
                     loadingstatus: false,
                 });
             });
@@ -39,7 +43,7 @@ class PlayerEditForm extends Component {
     render() {
         return (
             <>
-                <form>
+                <form onSubmit={this.updateExistingPlayer}>
                     <fieldset>
                         <div className="formgrid">
                             <input type="text"
@@ -59,7 +63,7 @@ class PlayerEditForm extends Component {
                                 id="position"
                                 value={this.state.position}
                             />
-                            <label htmlFor="playerName">Player Name</label>
+                            <label htmlFor="position">Player Position</label>
                         </div>
 
                         <div className="alignRight">
