@@ -39,7 +39,7 @@ class PlayerList extends Component {
                     <button
                         type="button"
                         className="btn"
-                        onClick={() => { this.props.history.push("./players/new") }}>
+                        onClick={() => { this.props.history.push("/players/new") }}>
                         Add Player
                     </button>
 

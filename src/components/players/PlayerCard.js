@@ -8,12 +8,17 @@ class PlayCard extends Component {
             <div className="card">
                 <div className="card-content">
                     <picture>
-                        <img src={require('./placeholder.svg')} alt="Player picture" />
+                        <i className="fas fa-user"></i>
                     </picture>
-                    <h3>Name:<span className="card-player-name">{this.props.player.name}</span></h3>
+
+                    <h3><span className="card-player-name">{this.props.player.name}</span></h3>
+
                     <p>Position: {this.props.player.position}</p>
+
                     <button type="button" onClick={() => this.props.deletePlayer(this.props.player.id)}>Release</button>
+
                     <Link to={`/players/${this.props.player.id}`}><button>Details</button></Link>
+
                     <button type="button"
                         onClick={() => { this.props.history.push(`/players/${this.props.player.id}/edit`) }}>Edit</button>
                 </div>

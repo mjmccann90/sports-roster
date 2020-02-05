@@ -6,6 +6,7 @@ class PlayerDetail extends Component {
     state = {
         name: "",
         position: "",
+        imgUrl: "",
         loadingStatus: true,
     }
 
@@ -22,19 +23,24 @@ class PlayerDetail extends Component {
                 this.setState({
                     name: player.name,
                     position: player.position,
+                    imgUrl: player.url,
                     loadingStatus: false,
                 });
             });
     }
     render() {
+        if (this.state.loadingStatus) return <p>Loading</p>
         return (
             <div className="content">
                 <div className="card-content">
                     <picture>
-                        <img src={require('placeholder')} alt="placeholder" />
+                        {/* <img src={require('./Images/${this.state.imgUrl}')} /> */}
+                        <i class="fas fa-user"></i>
                     </picture>
-                    <h3>Name:<span style={{ color: 'darkslategrey' }}>{this.stste.name}</span></h3>
+                    <h3>Name:<span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
                     <p>Position:{this.state.position}</p>
+                    <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
+
                 </div>
             </div>
         );
