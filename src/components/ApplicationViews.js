@@ -16,24 +16,26 @@ class ApplicationViews extends Component {
         return (
             <React.Fragment>
 
-                <Route path="/login" Component={Login} />
+                <Route path="/login" render={props => {
+                    return <Login setUser={this.props.setUser} {...props} />
+                }} />
 
                 <Route exact path="/" render={(props) => {
                     return <Home />
                 }} />
 
 
-                {/* <Route exact path="/players" render={props => {
+                <Route exact path="/players" render={props => {
                     if (this.props.user) {
                         return <PlayerList {...props} />
                     } else {
                         return <Redirect to="/login" />
                     }
-                }} /> */}
-
-                <Route exact path="/players" render={(props) => {
-                    return <PlayerList {...props} />
                 }} />
+
+                {/* <Route exact path="/players" render={(props) => {
+                    return <PlayerList {...props} />
+                }} /> */}
                 <Route exact path="/players/:playerId(\d+)" render={(props) => {
                     return <PlayerDetail playerId={parseInt(props.match.params.playerId)} {...props} />
                 }} />

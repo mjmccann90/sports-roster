@@ -36,7 +36,7 @@ class Login extends Component {
                             require="" autoFocus="" />
                         <label htmlFor="inputEmail">Email Address</label>
 
-                        <input onChange={this.handleFieldChange} type="email"
+                        <input onChange={this.handleFieldChange} type="password"
                             id="password"
                             placeholder="Password"
                             require="" />
