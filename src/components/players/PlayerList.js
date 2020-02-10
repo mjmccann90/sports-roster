@@ -38,7 +38,7 @@ class PlayerList extends Component {
                 <section className="section-content">
                     <button
                         type="button"
-                        className="btn"
+                        className="btn btn-dark"
                         onClick={() => { this.props.history.push("/players/new") }}>
                         Add Player
                     </button>

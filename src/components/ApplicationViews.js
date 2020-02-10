@@ -33,9 +33,7 @@ class ApplicationViews extends Component {
                     }
                 }} />
 
-                {/* <Route exact path="/players" render={(props) => {
-                    return <PlayerList {...props} />
-                }} /> */}
+
                 <Route exact path="/players/:playerId(\d+)" render={(props) => {
                     return <PlayerDetail playerId={parseInt(props.match.params.playerId)} {...props} />
                 }} />
