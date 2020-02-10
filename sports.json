@@ -140,5 +140,67 @@
       "password": "mark",
       "id": 1
     }
+  ],
+  "coaches": [
+    {
+      "coachId": 1,
+      "coachName": "Arther Smith",
+      "coachTitle": "Offensive Coordinator"
+    },
+    {
+      "coachId": 2,
+      "coachName": "Keith Carter",
+      "coachTitle": "Offensive Line"
+    },
+    {
+      "coachId": 3,
+      "coachName": "Tony Dews",
+      "coachTitle": "Running Backs"
+    },
+    {
+      "coachId": 4,
+      "coachName": "Todd Downing",
+      "coachTitle": "Tight Ends"
+    },
+    {
+      "coachId": 5,
+      "coachName": "Rob Moore",
+      "coachTitle": "Wide Receivers"
+    },
+    {
+      "coachId": 6,
+      "coachName": "Pat O'Hara",
+      "coachTitle": "Quarterbacks"
+    },
+    {
+      "coachId": 7,
+      "coachName": "Dean Pees",
+      "coachTitle": "Defensive Coordinator"
+    },
+    {
+      "coachId": 8,
+      "coachName": "Scott Booker",
+      "coachTitle": "Safeties"
+    },
+    {
+      "coachId": 9,
+      "coachName": "Shane Bowen",
+      "coachTitle": "Outside Linebackers"
+    },
+    {
+      "coachId": 10,
+      "coachName": "Jim Haslett",
+      "coachTitle": "Inside Linebackers"
+    },
+    {
+      "coachId": 11,
+      "coachName": "Anthony Midget",
+      "coachTitle": "Secondary"
+    },
+    {
+      "coachId": 12,
+      "coachName": "Terrell Williams",
+      "coachTitle": "Defensive Line"
+    }
   ]
 }
