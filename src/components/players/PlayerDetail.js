@@ -30,7 +30,7 @@ class PlayerDetail extends Component {
     render() {
         if (this.state.loadingStatus) return <p>Loading...</p>
         return (
-            <div className="content">
+            <div className="card">
                 <div className="card-content">
                     <picture>
                         {/* <img src={require('./Images/${this.state.imgUrl}')} /> */}
@@ -38,7 +38,7 @@ class PlayerDetail extends Component {
                     </picture>
                     <h3><span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
                     <p>Position:{this.state.position}</p>
-                    <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
+                    <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Release</button>
 
                 </div>
             </div>
