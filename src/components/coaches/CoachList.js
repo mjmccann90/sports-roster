@@ -8,8 +8,8 @@ class CoachList extends Component {
         coaches: [],
     }
 
-    deleteCoach = coachId => {
-        CoachManager.delete(coachId)
+    deleteCoach = id => {
+        CoachManager.delete(id)
             .then(() => {
                 CoachManager.getAll()
                     .then((newCoaches) => {
@@ -46,7 +46,7 @@ class CoachList extends Component {
                 <div className="container-cards">
                     {this.state.coaches.map(coach =>
                         <CoachCard
-                            key={coach.coachId}
+                            key={coach.id}
                             coach={coach}
                             deleteCoach={this.deleteCoach}
                             {...this.props} />

@@ -11,7 +11,7 @@ class CoachForm extends Component {
 
     handleFieldChange = evt => {
         const stateToChange = {};
-        stateToChange[evt.target.coachId] = evt.target.value;
+        stateToChange[evt.target.id] = evt.target.value;
         this.setState(stateToChange);
     };
 
