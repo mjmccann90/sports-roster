@@ -1,14 +1,14 @@
 const remoteURL = "http://localhost:8088"
 
 export default {
-    get(coachId) {
-        return fetch(`${remoteURL}/coaches/${coachId}`).then(result => result.json())
+    get(id) {
+        return fetch(`${remoteURL}/coaches/${id}`).then(result => result.json())
     },
     getAll() {
         return fetch(`${remoteURL}/coaches`).then(result => result.json())
     },
-    delete(coachId) {
-        return fetch(`http://localhost:8088/coaches/${coachId}`, {
+    delete(id) {
+        return fetch(`http://localhost:8088/coaches/${id}`, {
             method: "DELETE"
         })
             .then(result => result.json())
@@ -23,7 +23,7 @@ export default {
         }).then(data => data.json())
     },
     update(editedCoach) {
-        return fetch(`${remoteURL}/coaches/${editedCoach.coachId}`, {
+        return fetch(`${remoteURL}/coaches/${editedCoach.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

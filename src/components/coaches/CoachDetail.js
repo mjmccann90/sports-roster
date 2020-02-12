@@ -4,9 +4,8 @@ import './CoachDetail.css';
 
 class CoachDetail extends Component {
     state = {
-        CoachName: "",
+        coachName: "",
         coachTitle: "",
-        //imgUrl: "",
         loadingStatus: true,
     }
 
@@ -20,9 +19,8 @@ class CoachDetail extends Component {
         CoachManager.get(this.props.coachId)
             .then((coach) => {
                 this.setState({
-                    name: coach.coachName,
-                    title: coach.coachTitle,
-                    //imgUrl: player.url,
+                    coachName: coach.coachName,
+                    coachTitle: coach.coachTitle,
                     loadingStatus: false,
                 });
             });

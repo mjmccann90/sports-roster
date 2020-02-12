@@ -15,12 +15,12 @@ class CoachCard extends Component {
 
                     <p>Title: {this.props.coach.coachTitle}</p>
 
-                    <button type="button" onClick={() => this.props.deleteCoach(this.props.coach.coachId)}>Fire</button>
+                    <button type="button" onClick={() => this.props.deleteCoach(this.props.coach.id)}>Fire</button>
 
-                    <Link to={`/coaches/${this.props.coach.coachId}`}><button>Details</button></Link>
+                    <Link to={`/coaches/${this.props.coach.id}`}><button>Details</button></Link>
 
                     <button type="button"
-                        onClick={() => { this.props.history.push(`/coaches/${this.props.coach.coachId}/edit`) }}>Edit</button>
+                        onClick={() => { this.props.history.push(`/coaches/${this.props.coach.id}/edit`) }}>Edit</button>
                 </div>
             </div >
         );
