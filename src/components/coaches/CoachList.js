@@ -14,7 +14,7 @@ class CoachList extends Component {
                 CoachManager.getAll()
                     .then((newCoaches) => {
                         this.setState({
-                            players: newCoaches
+                            coaches: newCoaches
                         })
                     })
             })

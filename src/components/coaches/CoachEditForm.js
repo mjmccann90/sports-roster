@@ -6,7 +6,6 @@ class CoachEditForm extends Component {
     state = {
         coachName: "",
         coachTitle: "",
-        //url: "",
         id: "",
         loadingstatus: true,
     };
@@ -21,7 +20,7 @@ class CoachEditForm extends Component {
         evt.preventDefault()
         this.setState({ loadingstatus: true });
         const editedCoach = {
-            id: this.props.match.params.id,
+            id: this.props.match.params.coachId,
             coachName: this.state.coachName,
             coachTitle: this.state.coachTitle,
             //url: this.state.url
@@ -30,12 +29,11 @@ class CoachEditForm extends Component {
             .then(() => this.props.history.push("/coaches"))
     }
     componentDidMount() {
-        CoachManager.get(this.props.match.params.id)
+        CoachManager.get(this.props.match.params.coachId)
             .then(coach => {
                 this.setState({
                     coachName: coach.coachName,
                     coachTitle: coach.coachTitle,
-                    //url: player.url,
                     loadingstatus: false,
                 });
             });
@@ -60,7 +58,7 @@ class CoachEditForm extends Component {
                                 required
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="title"
+                                id="coachTitle"
                                 value={this.state.coachTitle}
                             />
                             <label htmlFor="title">Coaching Title</label>
